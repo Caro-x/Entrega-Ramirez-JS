@@ -3,10 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Elegi tu vino</title>
 </head>
 <body>
-    
+    <h1>Simulador de Maridaje de Vinos</h1>
+    <form id="pairingForm">
+        <label for="food">Selecciona una comida o ingrediente:</label>
+        <select id="food" name="food" required>
+            <option value="Carne Roja">Carne Roja</option>
+            <option value="Pollo">Pollo</option>
+            <option value="Pescado">Pescado</option>
+            <option value="Pasta">Pastas</option>
+            <option value="Queso">Queso</option>
+            <option value="Chocolate">Chocolate</option>
+        </select><br><br>
+
+        <button type="button" onclick="suggestWine()">Sugerir Vino</button>
+    </form>
+
+    <h2>Recomendaciones de Vinos</h2>
+    <div id="wineRecommendations"></div>
 </body>
+
 <script src="./main.js"></script>
+
 </html>
