@@ -3,20 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Elegi tu vino</title>
 </head>
 <body>
     <h1>Simulador de Maridaje de Vinos</h1>
     <form id="pairingForm">
         <label for="food">Selecciona una comida o ingrediente:</label>
-        <select id="food" name="food" required>
-            <option value="Carne Roja">Carne Roja</option>
-            <option value="Pollo">Pollo</option>
-            <option value="Pescado">Pescado</option>
-            <option value="Pasta">Pastas</option>
-            <option value="Queso">Queso</option>
-            <option value="Chocolate">Chocolate</option>
-        </select><br><br>
+        <input type="text" id="food" list="foodSuggestions" required>
+        <datalist id="foodSuggestions"></datalist>
 
         <button type="button" onclick="suggestWine()">Sugerir Vino</button>
     </form>

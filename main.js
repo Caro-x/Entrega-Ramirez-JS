@@ -24,6 +24,18 @@ const winePairings = {
         { name: "Zinfandel", description: "Ofrece un perfil afrutado y especiado, ideal para chocolates oscuros." }
     ]
 };
+window.onload = function(){
+    const edad = parseInt(prompt("Por favor, ingrese su edad"));
+
+    if(edad<18){
+        alert("Debe ser mayor de 18 años para acceder al sitio");
+        document.getElementById('pairingForm').style.display = 'none';
+        document.getElementById('wineRecommendations').style.display = 'none';
+    }
+}
+
+const foodInput = document.getElementById('food');
+const foodSuggestions = document.getElementById('foodSuggestions');
 
 function suggestWine() {
     const food = document.getElementById('food').value;
@@ -38,3 +50,18 @@ function suggestWine() {
 
     wineRecommendations.innerHTML = recommendationList;
 }
+
+function updateSuggestions(){
+    const inputValue = foodInput.value.toLowerCase();
+    foodSuggestions.innerHTML='';
+
+    const matchingFoods = Object.keys(winePairings).filter(food => food.toLowerCase().includes(inputValue));
+
+    matchingFoods.forEach(food =>{
+        const option = document.createElement('option');
+        option.value = food;
+        foodSuggestions.appendChild(option);
+    });
+}
+
+foodInput.addEventListener('input', updateSuggestions);
