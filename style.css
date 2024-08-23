@@ -1,7 +1,7 @@
 body {
     font-family: sans-serif;
     margin: 20px;
-    text-align: center; 
+    text-align: center;
 }
 
 h1, h2 {
@@ -12,17 +12,23 @@ h1, h2 {
     margin-bottom: 20px;
 }
 
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+select, input, button {
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 250px; /* Ajusta el ancho según tus necesidades */
+}
+
 button {
-    background-color: #4CAF50; 
-    border: none;
+    background-color: #4CAF50;
     color: white;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
     cursor: pointer;
-    border-radius: 5px; 
 }
 
 #wineRecommendations {

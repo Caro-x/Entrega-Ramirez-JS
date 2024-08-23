@@ -9,11 +9,22 @@
 <body>
     <h1>Simulador de Maridaje de Vinos</h1>
     <form id="pairingForm">
-        <label for="food">Selecciona una comida o ingrediente:</label>
-        <input type="text" id="food" list="foodSuggestions" required>
-        <datalist id="foodSuggestions"></datalist>
+        <label for="food">Selecciona un plato:</label>
+        <select id="food" name="food" required>
+            <option value="">-- Selecciona una opción --</option> 
+            <option value="Asado">Asado</option> 
+            <option value="Lomo con papas rusticas">Lomo con papas rusticas</option> 
+            <option value="Pechuga de pollo al champignon">Pechuga de pollo al champignon</option> 
+            <option value="Pollo al spiedo">Pollo al spiedo</option> 
+            <option value="Tagliatelle con salsa bolognesa">Tagliatelle con salsa bolognesa</option> 
+            <option value="Pappardelle con salsa parisienne">Pappardelle con salsa parisienne</option> 
+            <option value="Tabla de Queso">Tabla de Queso</option> 
+            <option value="Mouse de Chocolate amargo">Mouse de Chocolate amargo</option> 
+            <option value="Pizza">Pizza</option> 
+            <option value="Salmon a la salsa naranja">Salmon a la salsa naranja</option>
+        </select>
 
-        <button type="button" onclick="suggestWine()">Sugerir Vino</button>
+    <button type="button" onclick="suggestWine()">Sugerir Vino</button>
     </form>
 
     <h2>Recomendaciones de Vinos</h2>
