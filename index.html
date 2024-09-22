@@ -19,13 +19,15 @@
     <h2>Recomendaciones de Vinos</h2>
     <div id="wineRecommendations"></div>
     
-    <button type="button" onclick="clearRecommendations()">Limpiar Recomendaciones</button>
-    <button type="button" onclick="clearHistory()">Limpiar Historial</button> 
+    <button type="button" class="btn" onclick="clearRecommendations()">Limpiar Recomendaciones</button>
+    <button type="button" class="btn" onclick="clearHistory()">Limpiar Historial</button> 
 
     <h2>Historial de Recomendaciones</h2>
     <ul id="recommendationHistory"></ul>
+    <canvas id="wineTypeChart"></canvas>
 </body>
 
 <script src="./main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 </html>
