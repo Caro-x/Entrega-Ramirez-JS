@@ -98,7 +98,7 @@ function updateHistory() {
         history.forEach(entry => {
             const listItem = document.createElement('li');
             const formattedDate = new Date(entry.timestamp).toLocaleString(); 
-            listItem.textContent = `Comida: ${entry.food}, Vino: <span class="math-inline">\{entry\.wine\} \(</span>{formattedDate})`;
+            listItem.textContent = `Comida: ${entry.food}, Vino: ${entry.wine}(${formattedDate})`;
             historyList.appendChild(listItem);
         });
     }
