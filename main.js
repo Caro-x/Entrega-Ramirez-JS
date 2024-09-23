@@ -175,3 +175,4 @@ function generarColores(cantidad, opacidad = 0.2) {
     }
 
     return coloresSuaves.slice(0, cantidad);
+}
